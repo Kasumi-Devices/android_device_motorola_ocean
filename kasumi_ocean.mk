@@ -19,8 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common Project Materium stuff
-$(call inherit-product, vendor/materium/config/common_full_phone.mk)
+# Inherit some common Project Kasumi stuff
+$(call inherit-product, vendor/kasumi/config/common_full_phone.mk)
 
 # Inherit from ocean device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -32,7 +32,7 @@ PRODUCT_VENDOR_PROPERTY_BLACKLIST := \
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := ocean
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_NAME := materium_ocean
+PRODUCT_NAME := kasumi_ocean
 PRODUCT_MODEL := moto g(7) power
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -42,5 +42,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := motorola/ocean/ocean:9/PPO29.114-134/fee207:user/release-keys
 
-# Project Maerium specific flags
+# Project Kasumi specific flags
 TARGET_USES_BLUR := true
+#KASUMI_BUILD_TYPE := vanilla
+#KASUMI_SHIP_ADAWAY := true
+#LINEAGE_BUILDTYPE=OFFICIAL
